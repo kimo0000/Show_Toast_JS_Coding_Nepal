@@ -1,0 +1,64 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background: radial-gradient(#ddd 20%, #f50 60%, #af78 100%);
+  display: grid;
+  place-items: center;
+}
+.wrapper {
+  width: 50%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+ul li {
+  position: relative;
+  background-color: #ddd;
+  padding: px 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+ul li p {
+  padding: 8px;
+}
+ul li p:last-of-type {
+  /* display: none; */
+  /* margin-top: -20px; */
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.3s;
+}
+ul li.active p:last-of-type {
+  /* margin-top: 0px; */
+  /* overflow: visible; */
+  display: block;
+  height: 100px;
+  visibility: visible;
+}
+ul li .icon {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
